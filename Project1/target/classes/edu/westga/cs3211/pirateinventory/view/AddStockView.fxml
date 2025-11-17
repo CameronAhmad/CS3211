@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.westga.cs3211.pirateinventory.controller.AddStockController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Item Name:"/>
+    <TextField fx:id="itemNameField"/>
+
+    <Label text="Quantity:"/>
+    <TextField fx:id="quantityField"/>
+    
+    <Label text="Condition:"/>
+    <ComboBox fx:id="conditionBox"/>
+
+   
+    <Label text="Special Quality:"/>
+    <ComboBox fx:id="qualityBox"/>
+
+    <Button text="Add Stock" onAction="#handleAddStock"/>
+
+    <Label fx:id="messageLabel" textFill="red"/>
+    
+    <Button text="Logout" onAction="#handleLogout" />
+
+</VBox>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.westga.cs3211.pirateinventory.controller.ViewStockChangesController">
+
+    <padding>
+        <Insets top="20" bottom="20" left="20" right="20"/>
+    </padding>
+
+    <Label text="Stock Change History" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <VBox>
+            <Label text="Filter by Quality:"/>
+            <ComboBox fx:id="qualityFilter" onAction="#filterByQuality"/>
+        </VBox>
+
+        <VBox>
+            <Label text="Filter by CrewMate:"/>
+            <ComboBox fx:id="crewFilter" onAction="#filterByCrew"/>
+        </VBox>
+
+        <VBox>
+            <Label text="Start Date:"/>
+            <DatePicker fx:id="startDate" />
+        </VBox>
+
+        <VBox>
+            <Label text="End Date:"/>
+            <DatePicker fx:id="endDate" />
+        </VBox>
+
+        <Button text="Filter by Date Range" onAction="#filterByDateRange"/>
+        <Button text="Clear Filters" onAction="#clearFilters" />
+    </HBox>
+
+    
+    <ListView fx:id="changesList" prefHeight="400" prefWidth="700"/>
+    
+    <Button text="Logout" onAction="#handleLogout" />
+
+
+</VBox>
